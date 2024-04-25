@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { useWebcamCapture } from "./useWebcamCapture";
 // import logo from './logo.svg'
-import logo from "./slap.png";
+import logo from "./images/slap.png";
 
 import { Link, Switch, Route, Redirect } from "react-router-dom";
 
