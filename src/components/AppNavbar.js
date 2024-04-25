@@ -23,14 +23,13 @@ const useStyles = createUseStyles((theme) => ({
     marginLeft: '20px',
     textDecoration: 'none',
     fontWeight: 800,
-  }
-
+  },
 }));
 
 function AppNavbar(props) {
   const classes = useStyles(props);
   return (
-    <Navbar className="bg-body-tertiary">
+    <Navbar className="bg-body-tertiary"  expand="sm">
       <Container >
         <Navbar.Brand href="#home" className={classes.brand}>
           <FontAwesomeIcon icon={faHandSparkles} style={{ marginRight: '10px' }} />
@@ -38,8 +37,8 @@ function AppNavbar(props) {
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
           <Nav className="ml-auto">
-            <Nav.Link to="/" className={classes.navLink}>Home</Nav.Link>
-            <Nav.Link to="/readme" className={classes.navLink}>Readme</Nav.Link>
+            <Nav.Link href="/" className={classes.navLink}>Home</Nav.Link>
+            <Nav.Link href="/readme" className={classes.navLink}>Readme</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

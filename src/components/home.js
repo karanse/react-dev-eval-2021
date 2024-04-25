@@ -52,13 +52,13 @@ const useStyles = createUseStyles((theme) => ({
 
   },
 
-  Header: {
-    "&  h1": {
-      fontFamily: "sans-serif",
-      cursor: "pointer",
-      fontSize: "4rem",
-    },
-  },
+  // Header: {
+  //   "&  h1": {
+  //     fontFamily: "sans-serif",
+  //     cursor: "pointer",
+  //     fontSize: "4rem",
+  //   },
+  // },
   Main: {
     background: theme.palette.background,
 
@@ -92,11 +92,6 @@ const useStyles = createUseStyles((theme) => ({
   video: { display: "none" },
   canvas: { width: "100%", height: "auto" },
 
-  Gallery: {
-    "& img": {
-      height: "16rem",
-    },
-  },
   Picture: {
     background: "black",
     padding: 4,
@@ -149,7 +144,7 @@ function Home(props) {
       <section className={classes.card}>
         <div className={classes.cardNo}>2</div>
         <div className={classes.cardInfo}>
-        <h2 className={classes.cardTitle}>Select your sticker</h2>
+          <h2 className={classes.cardTitle}>Select your sticker</h2>
           <div className={classes.Stickers}>
             {stickers.map((el) => (
               <button
@@ -167,17 +162,21 @@ function Home(props) {
       <div className={classes.cardNo}>3</div>
       <div className={classes.cardInfo}>
         <h2 className={classes.cardTitle}>Slap your self!</h2>
-        <video ref={handleVideoRef} className={classes.video} />
-        <canvas
-         className={classes.canvas}
-          ref={handleCanvasRef}
-          width={2}
-          height={2}
-          onClick={handleCapture}
-        />
+        <div>
+          <video ref={handleVideoRef} className={classes.video} />
+          <canvas
+          className={classes.canvas}
+            ref={handleCanvasRef}
+            width={2}
+            height={2}
+            onClick={handleCapture}
+          />
+
+        </div>
+
         </div>
       </section>
-      <section className={classes.card}>
+      <section className={`${classes.card} ${classes.Gallery}`}>
       <div className={classes.cardNo}>4</div>
       <div className={classes.cardInfo}>
         <h2 className={classes.cardTitle}>Cherish this moment forever</h2>

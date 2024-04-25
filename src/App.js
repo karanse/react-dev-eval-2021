@@ -36,7 +36,6 @@ function App(props) {
     <div className={classes.App}>
       <div className={classes.container}>
         <AppNavbar/>
-
       </div>
       <Introduction/>
       <Switch>

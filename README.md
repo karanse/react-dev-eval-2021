@@ -1,3 +1,30 @@
+# Comment's from Sema:
+
+- Make it look really nice:
+  I used flex system to arranged items on UI. I created components for Navbar, Intro section and the home page itself. I picked a color theme and also use font awesome for a small logo. I also aded a new UI component, called Card, which I displays each "step" in the user flow while numbering clearly. I styled this card in the components .js file.
+
+- Let users pick from multiple (custom) stickers:
+  I added more sticker options for users to choose from.
+
+- Improve the workflow and ux:
+  By wrapping each step of the user flow in card component, and arranging alignment on the page helps user to follow the flow vertically.
+
+- Organize, document and test the code:
+  I modularized the code by creating components, adding images in a seperate folder. I rendered UI components in Home component and then rendered all the main parts in App.
+
+# Further improvements:
+
+- Organize, document and test the code, improve UX:
+  I started with creating components alongside with the UI improvements but the camera functionality doesn't work as I expected so I would investigate the issue if I had more time.
+
+- Show multiple captured images in a gallery:
+  I would like to investigate how to save pictures taken into an array and display on a gallery.
+
+- Organize, document and test the code:
+  I would like to investigate how to use unit tests to test each of the components individually to verify user flow.
+
+---
+
 # Devtest Readme
 
 Hello candidate, Welcome to our little dev test. The goal of this exercise, is to asses your general skill level, and give us something to talk about at our next appointment.
