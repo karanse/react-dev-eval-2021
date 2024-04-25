@@ -1,28 +1,12 @@
 import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { useWebcamCapture } from "../useWebcamCapture";
-import logo from "./images/slap.png";
+import logo from "../images/slap.png";
 
 
 const useStyles = createUseStyles((theme) => ({
-  "@global body": {
-    background: theme.palette.background,
-    color: theme.palette.text,
-    fontFamily: "sans-serif",
-    margin: 0,
-    padding: 0,
-  },
 
-  App: {
-    padding: "20px",
-    background: theme.palette.primary,
-    maxWidth: "800px",
-    minHeight: "600px",
-    margin: "auto",
-    "& a": {
-      color: theme.palette.text,
-    },
-  },
+
   Header: {
     "&  h1": {
       fontFamily: "sans-serif",
@@ -86,43 +70,43 @@ function Home(props) {
      picture, // latest captured picture data object
    ] = useWebcamCapture(sticker?.img, title);
 
-  return  <main>
-  <section className={classes.Gallery}>
-    Step one: Give it a name
-    <input
-      type="text"
-      value={title}
-      onChange={(ev) => setTitle(ev.target.value)}
-    />
-  </section>
-  <section className={classes.Stickers}>
+  return (
+    <main className={classes.main}>
+      <section className={classes.Gallery}>
+        Step one: Give it a name
+        <input
+          type="text"
+          value={title}
+          onChange={(ev) => setTitle(ev.target.value)}
+        />
+      </section>
+      <section className={classes.Stickers}>
     Step 2: select your sticker...
     <button onClick={() => setSticker(stickers[0])}>
       <img src={stickers[0].url} />
     </button>
-  </section>
-  <section className={classes.Main}>
-    Step three: Slap your self!
-    <video ref={handleVideoRef} />
-    <canvas
-      ref={handleCanvasRef}
-      width={2}
-      height={2}
-      onClick={handleCapture}
-    />
-  </section>
-  <section className={classes.Gallery}>
-    Step 4: Cherish this moment forever
-    {picture && (
-      <div className={classes.Picture}>
-        <img src={picture.dataUri} />
-        <h3>{picture.title}</h3>
-      </div>
-    )}
-  </section>
-</main>
-
-
+      </section>
+      <section className={classes.Main}>
+        Step three: Slap your self!
+        <video ref={handleVideoRef} />
+        <canvas
+          ref={handleCanvasRef}
+          width={2}
+          height={2}
+          onClick={handleCapture}
+        />
+      </section>
+      <section className={classes.Gallery}>
+        Step 4: Cherish this moment forever
+        {picture && (
+          <div className={classes.Picture}>
+            <img src={picture.dataUri} />
+            <h3>{picture.title}</h3>
+          </div>
+        )}
+      </section>
+    </main>
+  )
 }
 
 export default Home;
