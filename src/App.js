@@ -2,7 +2,6 @@ import { Link, Switch, Route, Redirect } from "react-router-dom";
 import { createUseStyles } from "react-jss";
 import Readme from "./components/Readme";
 import Home from "./components/Home";
-import NavbarSlap from "./components/AppNavbar";
 import Introduction from "./components/Introduction";
 import AppNavbar from "./components/AppNavbar";
 
@@ -52,5 +51,4 @@ function App(props) {
     </div>
   );
 }
-
 export default App;

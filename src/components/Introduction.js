@@ -11,7 +11,7 @@ const useStyles = createUseStyles((theme) => ({
     background: theme.palette.secondary,
     boxShadow: [0, 0, 10, "rgba(0, 0, 0, 0.1)"],
     borderRadius: 30,
-    width: "70%",
+    width: "50%",
     margin: "auto", // Centering the section horizontally
   },
   title: {
