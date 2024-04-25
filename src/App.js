@@ -11,6 +11,8 @@ const useStyles = createUseStyles((theme) => ({
     background: theme.palette.background,
     color: theme.palette.text,
     fontFamily: "sans-serif",
+    margin: 0,
+    padding: 0,
   },
 
   App: {
